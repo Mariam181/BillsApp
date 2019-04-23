@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.cont-form, .cont-bills, .bills-list {
+    border: 1px solid black;
+}
+
+.cont-results{
+    margin-top: 20px;
+    p{
+        padding: 10px; 
+        border-top: 1px solid black;
+    }
+}
+
+p{
+    span{
+        float: right;
+    }
+}
+
+body{
+    font-family: sans-serif;
+}
+
+table, th, td { 
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+	padding: 0.5em;
+}
+
+th {
+    cursor: pointer;
+}
+
+td {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}

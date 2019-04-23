@@ -1,0 +1,147 @@
+/**Create tabs**/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0; }
+
+.container {
+  position: relative;
+  width: 65%;
+  margin: 2em auto; }
+
+.tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; }
+  .tabs__item {
+    border: 1px solid #ccc;
+    border-bottom: none;
+    line-height: 2.5;
+    padding: 0 1em;
+    margin-right: 1px;
+    background-color: #eee;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    top: 1px;
+    z-index: 0;
+    cursor: pointer; }
+    .tabs__item.active {
+      background-color: #fff;
+      z-index: 20; }
+
+.panels {
+  border: 1px solid #ccc;
+  padding: 1em;
+  position: relative;
+  z-index: 10; }
+  .panels__item {
+    position: absolute;
+    left: -1000%; }
+    .panels__item.active {
+      position: relative;
+      left: 0; }
+
+.buttons {
+  display: flex; }
+
+.btn {
+  margin-right: 20px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+button {
+  cursor: pointer; }
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.cont-form, .cont-bills {
+  border: 1px solid black; }
+
+.cont-results {
+  margin-top: 20px; }
+  .cont-results p {
+    padding: 10px;
+    border-top: 1px solid black; }
+
+p span {
+  float: right; }
+
+body {
+  font-family: sans-serif; }
+
+table, th, td {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey; }
+
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+th, td {
+  padding: 0.5em; }
+
+th {
+  cursor: pointer; }
+
+td {
+  text-align: center; }
+
+input {
+  margin-bottom: 10px; }
+
+label {
+  padding: 5px; }
+
+.btn {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 0;
+  margin: 20px; }
+
+.btn-save {
+  float: right; }
+
+.btn-reset {
+  float: left; }
+
+.error {
+  border: 1px solid red; }
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; }
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.first_colum {
+  margin: 0 auto;
+  float: left;
+  width: 23%; }
+
+.second_colum {
+  margin: 0 auto;
+  float: left;
+  width: 21%; }
+
+.add_buttons {
+  background-color: #cccc; }
+
+.export__header {
+  display: flex; }
+
+.panels__item h2 {
+  margin-bottom: 20px; }
+
+.csv__button {
+  margin-left: 920px;
+  margin-right: 20px; }
+
+/*# sourceMappingURL=main.css.map */

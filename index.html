@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <ul class="tabs" id="tabs">
+            <li class="tabs__item active">Bills</li>
+            <li class="tabs__item">Create</li>
+            <li class="tabs__item">Export</li>
+        </ul>
+
+        <div class="panels">
+            <div class="panels__item active">
+                
+                <div class="buttons">
+                    <button class="btn btn_delete">Delete</button>
+                    <button class="btn btn_edit">Edit</button>
+                </div>
+                
+
+                <h3>Bills Table</h3>
+                <div class="cont-bills" id="cont-bills">
+
+                </div>
+                
+            </div>
+
+            <div class="panels__item">
+                <h3>Add Bill</h3>
+                <div class="cont-form clearfix">
+                    <form action="" id="form">
+                        <div class="first_colum">
+                            <label for="name">Name</label>
+                            <input name="name" type="text" id="name" class="field-form js-data" value="" placeholder="Name"><br>
+                        
+                            <label for="date">Date</label>
+                            <input name="date" type="date" id="date" class="field-form" value=""><br>
+
+                            <label for="">Description</label>
+                            <input type="text" placeholder="Description"><br>
+
+                            <label for="amount">Price</label>
+                            <input name="amount" type="number" id="amount" class="field-form js-data" value="" placeholder="Amount"><br>
+                        </div>
+                        
+                        <div class="second_colum">
+                            <label for="">Email</label>
+                            <input type="email"><br>
+
+                            <label for="">Total</label><br>
+
+                            <label for="amount">Quantity</label>
+                            <input name="amount" type="number" id="amount" class="field-form js-data" value="" placeholder="Amount"><br>
+                            <button class="btn-reset btn" id="btn-reset">Remove</button>
+                        </div>
+
+                        
+                        <label for="type"></label>
+                        <p name="type" id="type" >
+                            
+                        </p>
+                    </form>
+                    <button class="btn-save btn" id="btn-save">Save</button>
+                    <button class="btn-reset btn" id="btn-reset">Reset</button>
+                </div>
+            </div>
+            <div class="panels__item">
+                
+
+                <h2>Export</h2>
+                <div class="export__header">
+                    <h3>Export Bills</h3>
+                    <button class="csv__button">Export CSV</button>
+                    <button>Export JSON</button>
+                </div>
+                <div class="bills-list" id="bills-list"></div>
+                <div class="cont-bills" id="cont-bills"></div> 
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+label{
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 0;
+    margin: 20px;
+}
+
+.btn-save{
+    float: right;
+}
+
+.btn-reset{
+    float: left;
+}
+
+.error{
+    border: 1px solid red;
+    
+}
+
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.first_colum {
+    margin: 0 auto;
+    float: left;
+    width: 23%;
+}
+
+.second_colum {
+    margin: 0 auto;
+    float: left;
+    width: 21%;
+}
+
+.add_buttons {
+    background-color: #cccc;
+}
+
+.export__header {
+    display: flex;
+}
+
+.panels__item h2 {
+    margin-bottom: 20px;
+}
+.csv__button {
+    margin-left: 920px;
+    margin-right: 20px;
+}
