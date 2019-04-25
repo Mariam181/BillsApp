@@ -181,9 +181,29 @@
     }
 
     //Local Storage
+    function save_localstorage() {
+        datos=[];
+        datos_name = document.getElementsByName('name');
+        datos_date = document.getElementsByName('date');
+        datos_total = document.getElementsByName('amount');
 
+        for(x=0; x < datos_name.length; x++){
+            datos [datos.length] = [datos_name[x], datos_date[x], datos_total[x]]
+        }
+
+        cadena=JSON.stringify(datos);
+        window.localStorage.setItem('datos_tabla',cadena);
+    }
+
+    if(window.localStorage.getItem('datos_tabla')) {
+        cadena = window.localStorage.getItem('datos_tabla');
+        datos = JSON.parse(cadena);
+        for(x=0; x < datos.length; x++){
+            agregarFila(datos[x]);
+        }
+    }
     
-    
+    save_localstorage()
 
     
 })(document);
