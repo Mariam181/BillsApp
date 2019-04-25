@@ -30,6 +30,7 @@
 
     // crate table
     const table = document.createElement('table');
+    table.setAttribute('id', 'myTable');
     const rowBtn = document.createElement('tr');
     const btnName = document.createElement('th');
     const btnType = document.createElement('th');
@@ -89,6 +90,7 @@
         addBill();
     }
 
+
     function addBill() {
         divBill.innerHTML= '';
         for (let i = 0; i < Bills.length; i++) {
@@ -97,7 +99,13 @@
             let typeBill = document.createElement('td');
             let dateBill = document.createElement('td');
             let amountBill = document.createElement('td');
+            let deleteButton = document.createElement('td');
+            let btnDelete = document.createElement('button');
+            btnDelete.innerHTML='X';
+            btnDelete.setAttribute('id', 'btn-delete');
+            deleteButton.appendChild(btnDelete);
 
+            
             nameBill.innerHTML = Bills[i].name;
             typeBill.innerHTML = Bills[i].type;
             dateBill.innerHTML = Bills[i].date;
@@ -107,8 +115,11 @@
             rowBill.appendChild(typeBill);
             rowBill.appendChild(dateBill);
             rowBill.appendChild(amountBill);
+            rowBill.appendChild(deleteButton);
 
             divBill.appendChild(rowBill);
+
+            deleteButton.addEventListener('click', deleteRow);
         }
         addTotal();
     }
@@ -116,7 +127,6 @@
     class createBill {
         constructor(nameValue, typeValue, dateValue, amountValue) {
             this.name = nameValue;
-            
             this.date = dateValue;
             this.amount = parseInt(amountValue);
         }
@@ -129,14 +139,12 @@
     }
 
     function uploadBill() {
-        let newConstructor = new createBill(dataName.value,
-                                            dataType.value,
-                                            dataDate.value,
-                                            dataAmount.value);
+        let newConstructor = new createBill(dataName.value, dataType.value, dataDate.value, dataAmount.value);
         bills.push(newConstructor);
         cleanForm();
         orderList();
     }
+    
     function cleanClass () {
         data.forEach((e) => {
             e.classList.remove('error');
@@ -165,6 +173,17 @@
     reset.addEventListener('click', cleanForm);
     save.addEventListener('click', validateForm);
 
-    //Export list
+    //Delete Row
+    function deleteRow() {
+        let buttonDelete = document.getElementById('btn-delete');
+        borrar = buttonDelete.parentNode.parentNode;
+        borrar.parentNode.removeChild(borrar);
+    }
+
+    //Local Storage
+
+    
+    
+
     
 })(document);
